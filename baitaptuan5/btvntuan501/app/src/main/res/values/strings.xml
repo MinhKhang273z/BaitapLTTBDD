@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">btvntuan5-01</string>
+    <string name="text1">Navigation</string>
+    <string name="text2">is a framework that simplifies the implementation of navigation between different UI components (activities, fragments, or composables) in an app</string>
+    <string name="text3">01 | The only way to do great work is to love what you do.</string>
+    <string name="text4">02 | The only way to do great work is to love what you do.</string>
+    <string name="text5">03 | The only way to do great work is to love what you do.</string>
+    <string name="text6">04 | The only way to do great work is to love what you do.</string>
+    <string name="text7">05 | The only way to do great work is to love what you do.</string>
+    <string name="text8">1.000.000 | The only way to do great work is to love what you do.</string>
+    <string name="text9">“The only way to do great work \n is to love what you do”</string>
+</resources>
