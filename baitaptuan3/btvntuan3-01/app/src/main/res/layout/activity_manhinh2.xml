@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".manhinh2">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UI Components List"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:textColor="#0000FF"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Display"
+        android:textStyle="bold"
+        android:textSize="22dp"/>
+
+    <Button
+        android:id="@+id/btt3"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:text="Text\nDisplay text"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:backgroundTint="#33CCFF"
+        android:gravity="left"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:text="Image\nDisplay an image"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:backgroundTint="#33CCFF"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:text="TextField\nInput field for text"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:backgroundTint="#33CCFF"
+        android:gravity="left"/>
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:text="Image\nDisplay an image"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:backgroundTint="#33CCFF"
+        android:gravity="left"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Layout"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:text="Column\nArranges elements vertically"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:backgroundTint="#33CCFF"
+        android:gravity="left"/>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#33CCFF"
+        android:gravity="left"
+        android:text="Row\nArranges elements horizontally"
+        android:textColor="@color/black" />
+</LinearLayout>
