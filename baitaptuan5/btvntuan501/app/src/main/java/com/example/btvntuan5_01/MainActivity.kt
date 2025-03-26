@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -87,7 +88,6 @@ fun HomeScreen(navController: NavController) {
     }
 }
 
-// Màn hình 2
 @Composable
 fun SecondScreen(navController: NavController) {
     Column(
@@ -102,7 +102,9 @@ fun SecondScreen(navController: NavController) {
         ) {
             Button(
                 onClick = { navController.navigate("home_screen") },
-                modifier = Modifier.size(90.dp).padding(top = 40.dp),
+                modifier = Modifier
+                    .size(90.dp)
+                    .padding(top = 40.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent),
                 contentPadding = PaddingValues(0.dp)
             ) {
@@ -121,176 +123,47 @@ fun SecondScreen(navController: NavController) {
                 fontSize = 25.sp
             )
         }
-        Column(
+
+        // Đặt LazyColumn bên trong Column
+        LazyColumn(
             modifier = Modifier.padding(top = 20.dp)
         ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
-                    .padding(16.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.text3),
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(end = 60.dp)
-                )
-                Button(onClick = { navController.navigate("third_screen") },
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(50.dp),
-                    colors = ButtonDefaults.buttonColors(Color.Transparent)){
-                    Image(
-                        painter = painterResource(id = R.drawable.button2),
-                        contentDescription = "Back Image",
-                        modifier = Modifier.size(50.dp)
+            items(1_000_000) { index ->
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
+                        .padding(16.dp)
+                ) {
+                    Text(
+                        text = stringResource(id = if (index % 2 == 0) R.string.text7 else R.string.text8),
+                        color = Color.Black,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Medium,
+                        modifier = Modifier.padding(end = 60.dp)
                     )
+                    Button(
+                        onClick = { navController.navigate("third_screen") },
+                        contentPadding = PaddingValues(0.dp),
+                        modifier = Modifier
+                            .align(Alignment.CenterEnd)
+                            .size(50.dp),
+                        colors = ButtonDefaults.buttonColors(Color.Transparent)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.button2),
+                            contentDescription = "Back Image",
+                            modifier = Modifier.size(50.dp)
+                        )
+                    }
                 }
-            }
-        }
-        Column(
-            modifier = Modifier.padding(top = 20.dp)
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
-                    .padding(16.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.text4),
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(end = 60.dp)
-                )
-                Button(onClick = { navController.navigate("third_screen") },
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(50.dp),
-                    colors = ButtonDefaults.buttonColors(Color.Transparent)){
-                    Image(
-                        painter = painterResource(id = R.drawable.button2),
-                        contentDescription = "Back Image",
-                        modifier = Modifier.size(50.dp)
-                    )
-                }
-            }
-        }
-        Column(
-            modifier = Modifier.padding(top = 20.dp)
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
-                    .padding(16.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.text5),
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(end = 60.dp)
-                )
-                Button(onClick = { navController.navigate("third_screen") },
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(50.dp),
-                    colors = ButtonDefaults.buttonColors(Color.Transparent)){
-                    Image(
-                        painter = painterResource(id = R.drawable.button2),
-                        contentDescription = "Back Image",
-                        modifier = Modifier.size(50.dp)
-                    )
-                }
-            }
-        }
-        Column(
-            modifier = Modifier.padding(top = 20.dp)
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
-                    .padding(16.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.text6),
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(end = 60.dp)
-                )
-                Button(onClick = { navController.navigate("third_screen") },
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(50.dp),
-                    colors = ButtonDefaults.buttonColors(Color.Transparent)){
-                    Image(
-                        painter = painterResource(id = R.drawable.button2),
-                        contentDescription = "Back Image",
-                        modifier = Modifier.size(50.dp)
-                    )
-                }
-            }
-        }
-        Column(
-            modifier = Modifier.padding(top = 20.dp)
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
-                    .padding(16.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.text7),
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(end = 60.dp)
-                )
-                Button(onClick = { navController.navigate("third_screen") },
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(50.dp),
-                    colors = ButtonDefaults.buttonColors(Color.Transparent)){
-                    Image(
-                        painter = painterResource(id = R.drawable.button2),
-                        contentDescription = "Back Image",
-                        modifier = Modifier.size(50.dp)
-                    )
-                }
-            }
-        }
-        Column(
-            modifier = Modifier.padding(top = 20.dp)
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color(0xFFD0E8FF), shape = RoundedCornerShape(8.dp))
-                    .padding(16.dp)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.text8),
-                    color = Color.Black,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(end = 60.dp)
-                )
-                Button(onClick = { navController.navigate("third_screen") },
-                    contentPadding = PaddingValues(0.dp),
-                    modifier = Modifier.align(Alignment.CenterEnd).size(50.dp),
-                    colors = ButtonDefaults.buttonColors(Color.Transparent)){
-                    Image(
-                        painter = painterResource(id = R.drawable.button2),
-                        contentDescription = "Back Image",
-                        modifier = Modifier.size(50.dp)
-                    )
-                }
+                Spacer(modifier = Modifier.height(10.dp))
             }
         }
     }
 }
+
+
 
 // Màn hình 3
 @Composable
